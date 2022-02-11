@@ -386,16 +386,22 @@
         </ul>
         </div>
         <div class="footer-input-wrap">
-            <p class="footer-input-title">Подпишитесь на рассылку</p>
-            <input 
-            type="text" 
-            class="footer-input"
-            placeholder="E-mail">
-            <button type="submit" class="footer-input-btn">Подписаться
-                <svg class="button-icon" width="24" height="24">
-                    <use href="./images/page1/icons.svg#icon-send"></use>
-                </svg>
-            </button>
+        <form class="footer-form">
+            <div class="footer-wrap"></div>
+            <label for="footer-input" class="footer-label">Подпишитесь на рассылку</label>
+                <input 
+                    name="footer-input"
+                    type="email" 
+                    class="footer-input"
+                    placeholder="E-mail"
+                    id="footer-input">
+                <button type="submit" class="footer-input-btn">Подписаться
+                    <svg class="button-icon" width="24" height="24">
+                        <use href="./images/page1/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
+            </div>
+            </form>
         </div>
         </div>
     </footer>
@@ -460,17 +466,16 @@
                     placeholder="Введите текст"></textarea>
                 </div>
                 <div class="form-field">
+                    <label class="modal-check-text">
                         <input 
                         type="checkbox" 
                         name="user-agreement" 
-                        id="user-agreement"
                         class="modal-checkbox visually-hidden">
-                        <label for="user-agreement" class="modal-check-text">
                             <span class="modal-checkbox-icon">
                             <svg class="modal-input-check" width="16" height="15">
                                     <use href="./images/page1/icons.svg#icon-vector-check"></use>
                                 </svg>
-                            </span>Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                            </span>Соглашаюсь с рассылкой и принимаю<a href="" class="modal-check-second-text"> Условия договора</a></label>
                 </div>  
                 <button type="submit" class="modal-btn">Отправить</button>
         </form>
