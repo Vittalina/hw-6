@@ -417,6 +417,9 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.address-container {
+  flex-grow: 1;
+}
 .half-second-logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -502,8 +505,7 @@ address {
   fill: #ffffff;
 }
 .footer-input-wrap {
-  display: flex;
-  justify-content: center;
+  margin-left: 93px;
 }
 .footer-label {
   font-weight: bold;
@@ -514,11 +516,6 @@ address {
   color: #ffffff;
   margin-bottom: 20px;
   display: block;
-}
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 93px;
 }
 .footer-input {
   width: 358px;
@@ -545,7 +542,7 @@ address {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -557,11 +554,14 @@ address {
   cursor: pointer;
   min-width: 200px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 10px 28px 10px 29px;
 }
-
+.button-icon-wrap {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*---------------------MODAL WINDOW-----------------*/
 .backdrop {
   width: 100vw;
@@ -614,9 +614,10 @@ address {
   align-items: center;
   justify-content: center;
 }
-.modal-icon:hover,
-.modal-icon:focus {
+.modal-icon-link:hover > .modal-icon,
+.modal-icon-link:focus > .modal-icon {
   fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon {
   width: 18px;
@@ -658,9 +659,11 @@ address {
 }
 .modal-input:focus {
   border-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus + .modal-input-icon {
   fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input-icon {
   position: absolute;
@@ -688,21 +691,19 @@ address {
 }
 .modal-textarea:focus {
   border-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-check-text {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.modal-check-text > span {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.modal-check-text > span {
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -712,11 +713,11 @@ address {
 .modal-input-check {
   fill: transparent;
 }
-.modal-checkbox:checked + .modal-check-text > span {
+.modal-checkbox:checked + .modal-checkbox-icon {
   background-color: var(--accent-color);
   border: none;
 }
-.modal-checkbox:checked + .modal-check-text svg {
+.modal-checkbox:checked + .modal-checkbox-icon svg {
   fill: #ffffff;
 }
 .modal-check-second-text {
