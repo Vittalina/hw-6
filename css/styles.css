@@ -717,6 +717,11 @@ address {
 .modal-checkbox:checked + .modal-checkbox-icon svg {
   fill: #ffffff;
 }
+.modal-checkbox-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .modal-check-second-text {
   font-weight: normal;
   font-size: 14px;
